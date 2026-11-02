@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mis 15 Vicky - ¡Estás invitado! Confirmá tu asistencia para que sea una noche perfecta." />
+  <meta name="color-scheme" content="only light" />
+  <title>MIS 15 VICKY</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       SECTION 0: SOBRE DE BIENVENIDA
+       ══════════════════════════════════════════════════════════════ -->
+  <section id="intro-screen" class="intro-screen" aria-label="Abrir invitación">
+    <div id="mirrored-bg" aria-hidden="true">
+      <div class="bg-quadrant q1"></div>
+      <div class="bg-quadrant q2"></div>
+      <div class="bg-quadrant q3"></div>
+      <div class="bg-quadrant q4"></div>
+    </div>
+    <button id="envelope-button" class="envelope-button" type="button" aria-label="Abrir la invitación">
+      <span class="envelope-sprite" aria-hidden="true"></span>
+      <img class="envelope-seal" src="assets/images/lacre.png" alt="" />
+    </button>
+    <p id="tap-text" class="tap-text">Toca el sobre para abrir</p>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       MAIN CONTENT (hidden until welcome screen is dismissed)
+       ══════════════════════════════════════════════════════════════ -->
+  <main id="main-content" style="display: none;">
+
+    <!-- ═══════ SECTION 1: HERO IMAGE ═══════ -->
+    <!--<section id="hero" class="section-hero" aria-label="Foto principal">-->
+      <!-- Background image set via CSS -->
+    <!--</section>-->
+
+    <!-- ═══════ SECTION 2: COUNTDOWN ═══════ -->
+    <section id="countdown-section" class="section-light" aria-label="Cuenta regresiva">
+      <div class="section-inner">
+        <h2 class="section-title font-vicky animate-on-scroll">Mis 15 Vicky</h2>
+        <div class="spacer-20"></div>
+        <div id="countdown" class="countdown-wrap animate-on-scroll">
+          <div class="countdown-box">
+            <span class="countdown-number" id="cd-days">0</span>
+            <span class="countdown-label">DÍAS</span>
+          </div>
+          <span class="countdown-separator">:</span>
+          <div class="countdown-box">
+            <span class="countdown-number" id="cd-hours">0</span>
+            <span class="countdown-label">HORAS</span>
+          </div>
+          <span class="countdown-separator">:</span>
+          <div class="countdown-box">
+            <span class="countdown-number" id="cd-minutes">0</span>
+            <span class="countdown-label">MINUTOS</span>
+          </div>
+          <span class="countdown-separator">:</span>
+          <div class="countdown-box">
+            <span class="countdown-number" id="cd-seconds">0</span>
+            <span class="countdown-label">SEGUNDOS</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ SECTION 3: INTRO TEXT ═══════ -->
+    <section id="intro" class="section-dark" aria-label="Invitación">
+      <div class="section-inner narrow">
+        <div class="separator-line animate-on-scroll"></div>
+        <div class="spacer-20"></div>
+        <p class="intro-text font-cardo animate-on-scroll">
+          Quiero compartir con vos una noche muy especial.
+          <br />
+          Te invito a celebrar mis 15 años rodeada de las personas que más quiero.
+        </p>
+        <div class="spacer-20"></div>
+        <div class="separator-line animate-on-scroll"></div>
+      </div>
+    </section>
+
+    <!-- ═══════ SECTION 3.2: GALERÍA ═══════ -->
+    <section id="galeria" class="section-light" aria-label="Galería de fotos">
+      <div class="section-inner">
+        <h2 class="section-title font-vicky animate-on-scroll" style="font-size: 35px; letter-spacing: 3px;">Vicky</h2>
+        <div class="spacer-20"></div>
+        <div class="gallery-container">
+          <div class="gallery-track" id="gallery-track">
+            <div class="gallery-slide animate-on-scroll"><img src="assets/images/Vicky H1.jpeg" alt="Vicky 1" loading="lazy" /></div>
+            <div class="gallery-slide animate-on-scroll"><img src="assets/images/Vicky H2.jpeg" alt="Vicky 2" loading="lazy" /></div>
+            <div class="gallery-slide animate-on-scroll"><img src="assets/images/Vicky H3.jpeg" alt="Vicky 3" loading="lazy" /></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ SECTION 4: ¿CUÁNDO? ═══════ -->
+    <section id="cuando" class="section-dark" aria-label="Fecha y hora">
+      <div class="section-inner">
+        <div class="info-columns animate-on-scroll">
+          <!-- Date Column -->
+          <div class="info-col">
+            <div class="info-icon">
+              <img src="assets/images/calendar.gif">
+            </div>
+            <div class="info-separator"></div>
+            <h3 class="info-title font-montserrat">¿CUÁNDO?</h3>
+            <p class="info-desc font-montserrat">15 de Enero 2027</p>
+            <p class="info-desc font-montserrat">21:30 hs a 6:00 hs</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ SECTION 5: ¿DÓNDE? ═══════ -->
+    <section id="donde" class="section-light" aria-label="Ubicación">
+      <div class="section-inner">
+        <div class="info-columns single animate-on-scroll">
+          <div class="info-col">
+            <div class="info-icon">
+              <img src="assets/images/pin.gif">
+            </div>
+            <div class="info-separator"></div>
+            <h3 class="info-title font-montserrat">¿DÓNDE?</h3>
+            <p class="info-desc font-montserrat">Wal Kar Recepciones</p>
+            <p class="info-desc font-montserrat" style="font-size: 14px; opacity: 0.7;">Alberto Larroque 1488, Banfield</p>
+            <div class="spacer-20"></div>
+            <button id="btn-como-llegar" class="btn-outline" type="button">COMO LLEGAR</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ SECTION 7: REGALOS ═══════ -->
+    <section id="regalos" class="section-dark" aria-label="Regalos">
+      <div class="section-inner">
+        <div class="info-columns single animate-on-scroll">
+          <div class="info-col">
+            <div class="info-icon">
+              <img src="assets/images/gift.gif">
+            </div>
+            <div class="info-separator"></div>
+            <h3 class="info-title font-montserrat">REGALOS</h3>
+            <p class="info-desc font-montserrat">Tu presencia es mi mejor regalo, pero si querés tener un detalle...</p>
+            <div class="spacer-20"></div>
+            <button id="btn-sobre-virtual" class="btn-outline" type="button">VER SOBRE VIRTUAL</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ SECTION 8: QUIERO VER TUS FOTOS (Upload) ═══════ -->
+    <section id="fotos-upload" class="section-light" aria-label="Subir fotos">
+      <div class="section-inner">
+        <div class="upload-section animate-on-scroll">
+          <div class="info-col">
+            <div class="info-icon">
+              <img src="assets/images/camera.gif">
+            </div>
+            <div class="info-separator"></div>
+            <h3 class="info-title font-montserrat">QUIERO VER TUS FOTOS</h3>
+            <p class="info-desc font-montserrat">
+              Compartí los mejores momentos de la tarde con nosotros
+            </p>
+            <div class="spacer-20"></div>
+            <button id="btn-upload-photos" class="btn-outline" type="button">
+              <i class="fas fa-cloud-upload-alt"></i> SUBIR FOTOS
+            </button>
+            <input type="file" id="photo-input" multiple accept="image/*" style="display: none;" />
+            <!-- Upload progress area -->
+            <div id="upload-progress" class="upload-progress" style="display: none;">
+              <div class="upload-progress-bar">
+                <div class="upload-progress-fill" id="upload-progress-fill"></div>
+              </div>
+              <p class="upload-status font-montserrat" id="upload-status">Subiendo...</p>
+            </div>
+            <!-- Upload success -->
+            <div id="upload-success" class="upload-success" style="display: none;">
+              <i class="fas fa-check-circle"></i>
+              <p class="font-montserrat">¡Fotos subidas con éxito!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ SECTION 9: DRESS CODE ═══════ -->
+    <section id="dress-code" class="section-dark" aria-label="Código de vestimenta">
+      <div class="section-inner">
+        <div class="info-columns single animate-on-scroll">
+          <div class="info-col">
+            <div class="info-icon">
+              <img src="assets/images/disco.gif">
+            </div>
+            <div class="info-separator"></div>
+            <h3 class="info-title font-montserrat">DRESS CODE</h3>
+            <p class="info-desc font-montserrat">
+              Elegante
+            </p>
+            <div class="spacer-10"></div>
+            <div class="dress-code-colors">
+              <div class="dress-code-no">
+                <span class="color-swatch" style="background-color: #004ab1;" title="Azul"></span>
+                <span class="color-swatch" style="background-color: #87CEEB;" title="Celeste"></span>
+                <span class="color-swatch" style="background-color: #c8a2c8;" title="Colores claros/pasteles"></span>
+              </div>
+              <p class="dress-code-note font-montserrat">Evitar azul, celeste y colores claros o pasteles</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ SECTION 10: CONFIRMAR ASISTENCIA (RSVP) ═══════ -->
+    <section id="rsvp" class="section-rsvp" aria-label="Confirmación de asistencia">
+      <div class="rsvp-overlay"></div>
+      <div class="section-inner rsvp-content">
+        <div class="info-col animate-on-scroll">
+          <div class="info-icon">
+                <img src="assets/images/envelope.gif">
+          </div>
+          <div class="info-separator"></div>
+          <h2 class="section-title font-montserrat color-dark animate-on-scroll" style="font-size: 22px; text-transform: uppercase;">Confirmar Asistencia</h2>
+          <p class="info-desc font-montserrat color-dark" style="font-size: 16px; padding: 10px 0px 20px 0px;">
+              También puedes enviarme un mensaje por WhatsApp al <a href="https://wa.me/5491125511228" target="_blank" rel="noopener" style="color: var(--color-accent-3); text-decoration: underline;">11 2551-1228</a>
+          </p>
+
+          <form id="rsvp-form" class="rsvp-form animate-on-scroll" novalidate>
+            <!-- Attendance Toggle -->
+            <div class="rsvp-pills">
+              <label class="rsvp-pill">
+                <input type="radio" name="asistencia" value="si" required />
+                <span class="pill-label">SI, ASISTIRÉ</span>
+              </label>
+              <label class="rsvp-pill">
+                <input type="radio" name="asistencia" value="no" />
+                <span class="pill-label">NO PODRÉ IR</span>
+              </label>
+            </div>
+            <div class="spacer-20"></div>
+            
+            <!-- Name -->
+            <div class="form-group" id="rsvp-nombre-group">
+              <input type="text" id="rsvp-nombre" name="nombre" required placeholder=" " autocomplete="name" />
+              <label for="rsvp-nombre">Nombre</label>
+            </div>
+
+            <!-- Last Name -->
+            <div class="form-group" id="rsvp-apellido-group">
+              <input type="text" id="rsvp-apellido" name="apellido" required placeholder=" " autocomplete="name" />
+              <label for="rsvp-apellido">Apellido</label>
+            </div>
+
+            <!-- Number of Guests -->
+            <div class="form-group form-group-select" id="rsvp-cantidad-group">
+              <select id="rsvp-cantidad" name="cantidad" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+              <label for="rsvp-cantidad">Cantidad de personas</label>
+            </div>
+            
+            <!-- Phone -->
+            <div class="form-group" id="rsvp-telefono-group">
+              <input type="tel" id="rsvp-telefono" name="telefono" required placeholder=" " autocomplete="tel" />
+              <label for="rsvp-telefono">Teléfono</label>
+            </div>
+            
+            <!-- Dietary Restrictions -->
+            <div class="form-group form-group-select" id="rsvp-diet-group">
+              <div id="rsvp-diet-container">
+                <div class="diet-item rsvp-diet-row">
+                  <select class="form-select diet-select" id="rsvp-restricciones" name="restricciones">
+                    <option value="Ninguno">Ninguno</option>
+                    <option value="Vegano">Vegano</option>
+                    <option value="Vegetariano">Vegetariano</option>
+                    <option value="Celíaco">Celíaco</option>
+                    <option value="Diabético">Diabético</option>
+                    <option value="Hipertenso">Hipertenso</option>
+                    <option value="Intolerante a la lactosa">Intolerante a la lactosa</option>
+                  </select>
+                  <input type="text" class="form-input diet-name is-hidden" placeholder="Nombre de la persona" autocomplete="off" />
+                </div>
+              </div>
+              <button type="button" id="rsvp-add-diet" class="btn-outline rsvp-add-diet-btn" style="display: none;">+ Añadir requerimiento</button>
+
+              <label for="rsvp-restricciones">Restricciones alimentarias (opcional)</label>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group" id="rsvp-mensaje-group">
+              <input type="text" id="rsvp-mensaje" name="mensaje" placeholder=" " autocomplete="off" />
+              <label for="rsvp-mensaje">Mensaje para Vicky</label>
+            </div>
+            
+            <!-- Submit -->
+            <button type="submit" id="rsvp-submit" class="btn-submit font-montserrat">
+              <span class="btn-text">CONFIRMAR</span>
+              <span class="btn-loader" style="display:none;"><i class="fas fa-spinner fa-spin"></i></span>
+            </button>
+          </form>
+          
+          <!-- Success Message -->
+          <div id="rsvp-success" class="rsvp-feedback" style="display: none;">
+            <i class="fas fa-check-circle"></i>
+            <p class="font-montserrat">¡Gracias por confirmar! Te esperamos.</p>
+          </div>
+          <!-- Error Message -->
+          <div id="rsvp-error" class="rsvp-feedback error" style="display: none;">
+            <i class="fas fa-exclamation-circle"></i>
+            <p class="font-montserrat">Hubo un error. Intentá de nuevo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- ═══════ SECTION 11: FOOTER ═══════ -->
+    <footer id="footer" class="section-light" aria-label="Pie de página">
+      <div class="section-inner">
+        <div class="footer-content animate-on-scroll">
+          <p class="footer-text font-cardo">¡Te espero!</p>
+          <p class="footer-name font-vicky">Vicky</p>
+          <div class="footer-credit">
+            <span>Hecho por Micaela Marrone</span>
+            <span>|</span>
+            <a href="https://wa.me/5491140766376" target="_blank" class="footer-credit-link">
+              <img src="assets/images/WhatsApp.png" alt="WhatsApp" class="footer-credit-icon">
+              11 4076-6376
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       MODALS
+       ══════════════════════════════════════════════════════════════ -->
+
+  <!-- Modal: ¿Cómo Llegar? -->
+  <div id="modal-mapa" class="modal" role="dialog" aria-modal="true" aria-label="Mapa del evento">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close" type="button" aria-label="Cerrar">
+        <i class="fas fa-times"></i>
+      </button>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3278.5197008392033!2d-58.41919282426575!3d-34.74249916484086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a3337059a1d4b1%3A0xc698cccc267d0d6d!2sWal%20Kar%20Recepciones!5e0!3m2!1ses-419!2sar!4v1791958062193!5m2!1ses-419!2sar"
+        height="400" 
+        style="border:0; border-radius: 8px; width: 100%;" 
+        allowfullscreen
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      <div class="spacer-10"></div>
+      <a href="https://maps.app.goo.gl/gK7qbqe3PZ2TxV7cA" target="_blank" rel="noopener" class="btn-outline" style="display: inline-block; text-decoration: none;">
+        ABRIR EN GOOGLE MAPS
+      </a>
+    </div>
+  </div>
+
+  <!-- Modal: Sobre Virtual -->
+  <div id="modal-sobre" class="modal" role="dialog" aria-modal="true" aria-label="Sobre virtual">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content sobre-content">
+      <button class="modal-close" type="button" aria-label="Cerrar">
+        <i class="fas fa-times"></i>
+      </button>
+      <h3 class="font-montserrat" style="text-align: center; margin-bottom: 20px; color: #2e2e2e;">SOBRE VIRTUAL</h3>
+      <div class="sobre-item">
+        <p class="sobre-label font-montserrat">ALIAS</p>
+        <p class="sobre-value font-montserrat" id="alias-value">vickyyccioni</p>
+        <button class="btn-copy" type="button" data-copy="vickyyccioni" aria-label="Copiar alias">
+          <i class="fas fa-copy"></i> Copiar
+        </button>
+      </div>
+      <div class="spacer-20"></div>
+      <p class="sobre-thanks font-cardo" style="text-align: center; color: #636363; font-style: italic;">¡Gracias por tu cariño!</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       MUSIC PLAYER (Floating Button)
+       Coloca tu archivo de música en: assets/audio/musica.mp3
+       ══════════════════════════════════════════════════════════════ -->
+  <button id="play-pause-btn" class="music-btn" type="button" aria-label="Reproducir/Pausar música" style="display: none;">
+    <i class="fas fa-pause" id="music-icon"></i>
+  </button>
+  <audio id="bg-music" loop preload="auto">
+    <!-- ════════════════════════════════════════════════════════════
+         ★ INSTRUCCIÓN: Colocá tu archivo .mp3 en la carpeta
+           assets/audio/ y actualizá el src a continuación.
+           Ejemplo: src="assets/audio/musica.mp3"
+         ════════════════════════════════════════════════════════════ -->
+    <source src="assets/audio/musica.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
