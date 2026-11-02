@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: tarjeta15vicky
+    name: mis15vicky
     runtime: static
     buildCommand: ""
     staticPublishPath: .
